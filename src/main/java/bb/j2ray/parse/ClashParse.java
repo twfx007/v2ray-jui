@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 public class ClashParse implements IParseConfig{
     @Override
-    public V2RayConfig parse(Object param) {
+    public V2RayConfig parse(Object param) throws Exception {
         String yamlContent= (String) param;
         Yaml yaml=new Yaml();
         Map<String,Object> map=yaml.load(yamlContent);

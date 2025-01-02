@@ -1,18 +1,15 @@
 package bb.j2ray.parse;
 
 import bb.j2ray.config.*;
-import bb.j2ray.tools.FileTool;
 import bb.j2ray.tools.HttpException;
 import bb.j2ray.tools.HttpTool;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
-import com.alibaba.fastjson2.JSONWriter;
 
 import java.util.Base64;
 
 public class URLClashParse implements IParseConfig{
-    static String kk="http://47.100.108.254:16888/api/v1/client/subscribe?token=02dbe07702dfa2d7db0674f8e9d08652";
     public V2RayConfig parse(Object param) {
         JSONArray jsonArray= getContent((String) param);
         V2RayConfig config=new V2RayConfig();

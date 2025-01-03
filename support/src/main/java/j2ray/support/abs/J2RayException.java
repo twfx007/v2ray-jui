@@ -1,4 +1,4 @@
-package j2ray.support.error;
+package j2ray.support.abs;
 
 public class J2RayException extends Exception{
     public final int code;

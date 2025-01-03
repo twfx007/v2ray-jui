@@ -1,7 +1,7 @@
 package j2ray.command.impls;
 
 import j2ray.command.support.ICommand;
-import j2ray.support.error.J2RayException;
+import j2ray.support.abs.J2RayException;
 
 public class J2RayExit implements ICommand {
     @Override

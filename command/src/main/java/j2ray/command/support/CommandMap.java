@@ -2,7 +2,8 @@ package j2ray.command.support;
 
 import j2ray.command.impls.J2RayEnv;
 import j2ray.command.impls.J2RayExit;
-import j2ray.support.error.J2RayException;
+import j2ray.support.abs.V2Ray;
+import j2ray.support.abs.J2RayException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,9 +11,11 @@ import java.util.List;
 import java.util.Map;
 
 public class CommandMap {
+    public static final V2Ray ray=new V2Ray();
     private static final Map<String,ICommand> map=new HashMap<>();
     private static final List<ICommand> list=new ArrayList<>();
     static void init(String[] args){
+        ray.init(args);
         registerKey(new J2RayEnv());
         registerKey(new J2RayExit());
     }

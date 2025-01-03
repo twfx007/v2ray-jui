@@ -1,1 +1,3 @@
-rootProject.name = "v2ray-jui"
+rootProject.name = 'v2ray-jui'
+include 'command'
+include 'support'

@@ -2,13 +2,12 @@ apply plugin: 'application'
 archivesBaseName = 'command'
 buildDir="$rootBuildDir/command"
 
-mainClassName = 'j2ray.command.Main'
+mainClassName = 'j2ray.command.support.Main'
 applicationDefaultJvmArgs = [
         "-Xms128m",
         "-Xmx256m",
         "-Xmn96m",
-        "-Xss512k",
-        "-Xrunjdwp:transport=dt_socket,address=0.0.0.0:18132,server=y,suspend=n"
+        "-Xss512k"
 ]
 
 

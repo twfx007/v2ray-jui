@@ -7,11 +7,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        CommandMap.init(args);
         try {
-            CommandMap.ray.startV2ray();
+            CommandMap.init(args);
         } catch (J2RayException e) {
-            J2RayOutput.println("start v2ray error code={1},msg={2}",e.code,e.msg);
+            J2RayOutput.println("CommandMap.init error Code={1},Msg={2}",e.code,e.msg);
         }
         Scanner scanner=new Scanner(System.in);
         while (true){

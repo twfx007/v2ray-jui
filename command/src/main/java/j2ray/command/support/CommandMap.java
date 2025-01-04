@@ -1,5 +1,6 @@
 package j2ray.command.support;
 
+import j2ray.command.impls.GenerateConfig;
 import j2ray.command.impls.J2RayEnv;
 import j2ray.command.impls.J2RayExit;
 import j2ray.support.abs.V2Ray;
@@ -14,8 +15,9 @@ public class CommandMap {
     public static final V2Ray ray=new V2Ray();
     private static final Map<String,ICommand> map=new HashMap<>();
     private static final List<ICommand> list=new ArrayList<>();
-    static void init(String[] args){
+    static void init(String[] args) throws J2RayException {
         ray.init(args);
+        registerKey(new GenerateConfig());
         registerKey(new J2RayEnv());
         registerKey(new J2RayExit());
     }

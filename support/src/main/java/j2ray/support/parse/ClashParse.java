@@ -1,5 +1,6 @@
 package j2ray.support.parse;
 
+import j2ray.support.abs.J2RayException;
 import j2ray.support.config.*;
 import org.yaml.snakeyaml.Yaml;
 
@@ -8,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 public class ClashParse implements IParseConfig{
     @Override
-    public V2RayConfig parse(Object param) throws Exception {
+    public V2RayConfig parse(Object param) throws J2RayException {
         String yamlContent= (String) param;
         Yaml yaml=new Yaml();
         Map<String,Object> map=yaml.load(yamlContent);

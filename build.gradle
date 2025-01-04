@@ -1,14 +1,7 @@
 allprojects {
     group 'rouge'
     repositories {
-        maven {
-            allowInsecureProtocol(true)
-            url "http://10.1.1.241:8081/repository/maven-public/"
-            credentials {
-                username="test"
-                password="12345"
-            }
-        }
+        mavenCentral()
     }
 }
 
